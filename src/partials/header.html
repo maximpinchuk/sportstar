@@ -1,0 +1,102 @@
+<header class="header">
+    <div class="header-topbar">
+        <div class="header-container container">
+            <div class="header-topbar__left-panel">
+                <a href="index.html" aria-label="На главную">
+                    <img class="header-logo" src="img/logo.svg" alt="Sportstar">
+                </a>
+            </div>
+            <div class="header-topbar__right-panel">
+                <nav class="topbar-nav">
+                    <ul class="nav-list">
+                        <li class="nav-list__item">
+                            <a class="nav-list__item__link" href="about.html" aria-label="о компании">о компании</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a class="nav-list__item__link" href="catalog.html" aria-label="каталог">каталог</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a class="nav-list__item__link" href="news.html" aria-label="информация">информация</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a class="nav-list__item__link" href="contacts.html" aria-label="контакты">контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="topbar-userbar">
+                    <a class="userbar-link" href="account.html" aria-label="Профиль">
+                        <svg class="userbar-link__icon" viewBox="0 0 15 15" width="15px" height="15px">
+                            <path d="M7.5,7.5A3.75,3.75,0,1,0,3.75,3.75,3.76,3.76,0,0,0,7.5,7.5h0Zm0,1.88C5,9.37,0,10.59,0,13.12V15H15V13.12c0-2.53-5-3.75-7.5-3.75h0Zm0,0"/>
+                        </svg>
+                    </a>
+                    <a class="userbar-link" href="cart.html" aria-label="Корзина">
+                        <svg class="userbar-link__icon" viewBox="0 0 15 15" width="15px" height="15px">
+                            <path class="cls-1" d="M4.8,6.19a0.62,0.62,0,0,0,.62-0.62V3.18a1.95,1.95,0,1,1,3.89,0v2.4a0.62,0.62,0,1,0,1.23,0V3.18a3.18,3.18,0,1,0-6.35,0v2.4a0.62,0.62,0,0,0,.61.62h0Zm0,0"/>
+                            <path d="M14.42,4.81H11.15V5.58a1.23,1.23,0,0,1-2.46,0V4.81H6V5.58a1.23,1.23,0,0,1-2.46,0V4.81H0.27a0.23,0.23,0,0,0-.23.3l2.15,8.77a1.26,1.26,0,0,0,1.16.89h8a1.26,1.26,0,0,0,1.16-.89l2.15-8.77a0.23,0.23,0,0,0-.23-0.3h0Zm0,0"/>
+                        </svg>
+                        <div class="userbar-link__tip cart">
+                            <span>0</span>
+                        </div>
+                    </a>
+                    <div class="phones-icon">
+                        <button class="userbar-link phones" aria-label="Телефоны">
+                            <svg class="userbar-link__icon" viewBox="0 0 15 15" width="15px" height="15px">
+                                <g>
+                                    <path d="M14.46,11.65L12.18,9.37a1.19,1.19,0,0,0-1.68,0L9.36,10.55l-0.23-.13a11.45,11.45,0,0,1-2.76-2,11.48,11.48,0,0,1-2-2.77L4.24,5.44,5,4.67l0.38-.38a1.19,1.19,0,0,0,0-1.68L3.14,0.33a1.19,1.19,0,0,0-1.68,0L0.82,1l0,0A3.73,3.73,0,0,0,.31,2a3.84,3.84,0,0,0-.24.95C-0.23,5.4.91,7.69,4,10.78c4.28,4.28,7.73,4,7.88,3.94a3.85,3.85,0,0,0,1-.24A3.68,3.68,0,0,0,13.77,14h0l0.65-.64a1.19,1.19,0,0,0,0-1.68h0Zm0,0"/>
+                                </g>
+                            </svg>
+                            <div class="userbar-link__tip">
+                                <span>+</span>
+                            </div>
+                        </button>
+                        <div class="phones-block">
+                            <ul class="phones-block__list">
+                                <li class="phones-block__list__item">
+                                    <a class="phones-block__tel" href="tel:+375171111111" aria-label="+375171111111" tabindex="-1">+375 17 111 11 11</a>
+                                </li>
+                                <li>
+                                    <a class="phones-block__tel" href="tel:+375290000000" aria-label="+375290000000" tabindex="-1">+375 29 000 00 00</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="userbar-link navigation--adaptive" aria-label="Меню">
+                        <span class="navigation--adaptive__line"></span>
+                        <span class="navigation--adaptive__line"></span>
+                        <span class="navigation--adaptive__line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-lowbar">
+        <div class="header-container container">
+            <div class="header-lowbar__left-panel">
+                //= navigation/lowbar-nav.html
+            </div>
+            <div class="header-lowbar__right-panel">
+                <button class="search search--desktop" aria-label="Открыть поиск">
+                    <svg class="search__icon" viewBox="0 0 15 15" width="15px" height="15px">
+                        <path class="cls-1" d="M14.67,13.06l-2.95-2.95A6.43,6.43,0,0,0,6.44,0,6.44,6.44,0,0,0,1.89,11a6.42,6.42,0,0,0,8.22.72l3,3A1.14,1.14,0,0,0,14.67,13.06ZM6.44,10.61A4.17,4.17,0,1,1,9.39,9.38h0A4.15,4.15,0,0,1,6.44,10.61Z"/>
+                    </svg>
+                    <span class="search__text">поиск</span>
+                </button>
+                <div class="search-wrapper">
+                    <div class="search-form__close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="search-form-block">
+                        <form class="search-form" action="search-results.html">
+                            <svg class="search-form__control__icon" viewBox="0 0 15 15" width="15px" height="15px">
+                                <path class="cls-1" d="M14.67,13.06l-2.95-2.95A6.43,6.43,0,0,0,6.44,0,6.44,6.44,0,0,0,1.89,11a6.42,6.42,0,0,0,8.22.72l3,3A1.14,1.14,0,0,0,14.67,13.06ZM6.44,10.61A4.17,4.17,0,1,1,9.39,9.38h0A4.15,4.15,0,0,1,6.44,10.61Z"/>
+                            </svg>
+                            <input class="search-form__control" type="search" name="search" placeholder="Введите запрос">
+                            <button class="search-form__btn" aria-label="Искать">поиск</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

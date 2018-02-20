@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Мои данные | Sportstar</title>
+        <meta name="description" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles/main.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    </head>
+    <body>
+        //= partials/navigation/adaptive-nav.html
+        //= partials/header.html
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <aside class="sidebar consumer-info">
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-nav__item">
+                                <a class="sidebar-nav__item__link sidebar-nav__item__link--current" href="#" aria-label="мои данные">мои данные</a>
+                            </li>
+                            <li class="sidebar-nav__item">
+                                <a class="sidebar-nav__item__link" href="account-history.html" aria-label="история заказов">история заказов</a>
+                            </li>
+                            <li class="sidebar-nav__item">
+                                <a class="sidebar-nav__item__link" href="account-reviews.html" aria-label="отзывы и вопросы">отзывы и вопросы</a>
+                            </li>
+                            <li class="sidebar-nav__item">
+                                <a class="sidebar-nav__item__link" href="account-favorite.html" aria-label="избранное">избранное</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <article class="article">
+                        <h1 class="article__title">Личный кабинет</h1>
+                        <form class="form" action="example.php">
+                            <div class="row">
+                                <div class="form-col">
+                                    <fieldset class="form-group form-group--single">
+                                        <div class="form-control-wrapper--single">
+                                            <input class="form-control" id="name" type="text" name="name" value="Василий">
+                                            <label class="form-label" for="name">Ваше имя</label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-group form-group--single">
+                                        <div class="form-control-wrapper--single">
+                                            <input class="form-control" id="surname" type="text" name="surname" value="">
+                                            <label class="form-label" for="surname">Ваша фамилия</label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-group form-group--single">
+                                        <div class="form-control-wrapper--single">
+                                            <input class="form-control" id="tel" type="tel" name="tel" value="">
+                                            <label class="form-label" for="tel">Ваш телефон</label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-group form-group--single">
+                                        <div class="form-control-wrapper--single">
+                                            <input class="form-control" id="email" type="email" name="email" value="">
+                                            <label class="form-label" for="email">Ваша электронная почта</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="form-col">
+                                    <fieldset class="form-group form-group--single">
+                                        <div class="form-control-wrapper--single">
+                                            <select class="select select--city" id="city" name="city">
+                                                <option value="">Ваш город</option>
+                                                <option value="Минск">Минск</option>
+                                                <option value="Гродно">Гродно</option>
+                                                <option value="Брест">Брест</option>
+                                            </select>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-group form-group--single">
+                                        <div class="form-control-wrapper--single">
+                                            <input class="form-control" id="street" type="text" name="street" value="">
+                                            <label class="form-label" for="street">Ваша улица</label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-group form-group--multiple">
+                                        <div class="form-control-wrapper--multiple">
+                                            <input class="form-control" id="house" type="text" name="house" value="">
+                                            <label class="form-label" for="house">Ваш дом</label>
+                                        </div>
+                                        <div class="form-control-wrapper--multiple">
+                                            <input class="form-control" id="apartment" type="text" name="apartment" value="">
+                                            <label class="form-label" for="apartment">Ваша квартира</label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-group form-group--single">
+                                        <div class="form-control-wrapper--single">
+                                            <input class="form-control" id="zip-code" type="text" name="zip-code" value="">
+                                            <label class="form-label" for="zip-code">Ваш почтовый индекс</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-col">
+                                    <div class="nst-component nst-is-collapsed">
+                                        <a class="form-password-change nst-toggle" href="#" aria-label="изменить пароль">изменить пароль
+                                            <svg class="form-password-change__icon nst-toggle__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                                                <rect y="3" width="8" height="2"/>
+                                                <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                                            </svg>
+                                        </a>
+                                        <div class="nst-content change-password-block">
+                                            <fieldset class="form-group form-group--single">
+                                                <div class="form-control-wrapper--single">
+                                                    <input class="form-control" id="password" type="password" name="password-confirm" value="">
+                                                    <label class="form-label" for="password">Введите новый пароль</label>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group form-group--single">
+                                                <div class="form-control-wrapper--single">
+                                                    <input class="form-control" id="password-confirm" type="password" name="password-confirm" value="">
+                                                    <label class="form-label" for="password-confirm">Введите новый пароль еще раз</label>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-btn-wrapper">
+                                <button class="form-btn btn btn--accent save">Сохранить</button>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        //= partials/footer.html
+    </body>
+</html>

@@ -1,0 +1,160 @@
+.quickview-modal-content {
+    @include grid-col(12 12 12 10);
+    margin: auto;
+}
+
+.quickview-header {
+    text-align: left;
+    margin: 50px 0 0 0;
+    @include grid-breakpoint(md) {
+        margin: 50px 0 0 0;
+    }
+
+    .quickview-header__availability {
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: $accent-color;
+        line-height: (56/12);
+        text-transform: uppercase;
+    }
+
+    .quickview-header__title {
+        margin: 0 0 5px 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #252425;
+        line-height: (40/24);
+        text-transform: uppercase;
+        @include grid-breakpoint(md) {
+            width: 70%;
+        }
+    }
+
+    .quickview-header__brand {
+        margin: 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #252425;
+        line-height: (40/16);
+        text-transform: uppercase;
+    }
+}
+
+.quickview-body {
+    margin: 30px 0 0 0;
+    @include grid-breakpoint(md) {
+        // display: flex;
+    }
+
+    .product-image {
+        @include grid-col(12 12 12 6);
+        margin: 0;
+    }
+
+    .product-info {
+        @include grid-col(12 12 12 6);
+        margin: 50px 0 0 0;
+
+        @include grid-breakpoint(md) {
+            margin: 0;
+        }
+
+        .product-info__colors {
+
+            .product-info__subtitle {
+                margin-top: 0;
+                text-align: left;
+            }
+
+            .colors-block {
+                display: flex;
+                flex-wrap: wrap;
+                width: 80%;
+            }
+        }
+
+        .product-info__sizes {
+
+            .product-info__subtitle {
+                text-align: left;
+            }
+
+            .product-info__sizes-block {
+                width: 80%;
+            }
+        }
+
+        .product-info__prices {
+            margin: 50px 0 0 0;
+            text-align: left;
+        }
+
+        .submit-block {
+            display: block;
+            text-align: left;
+
+            .submit-block__tip {
+                display: block;
+                margin: 30px 0 0 0;
+            }
+        }
+    }
+
+    .product-descr {
+        text-align: left;
+    }
+}
+
+.quickview-footer {
+    margin: -1px 0 0 0;
+    overflow: hidden;
+
+    .quickview-footer__link {
+        position: relative;
+        display: block;
+        height: 70px;
+        padding-top: 30px;
+        margin: auto;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: $accent-color;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #ffffff;
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $accent-color;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            z-index: -1;
+            width: 200%;
+            height: 100%;
+            background-color: $accent-color;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+    }
+}

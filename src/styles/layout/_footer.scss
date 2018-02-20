@@ -1,0 +1,191 @@
+.footer {
+    .footer-topbar {
+        padding: 80px 0 70px 0;
+        background-color: $footer-bg--topbar;
+        @include grid-breakpoint(md) {
+            padding: 80px 0;
+        }
+    }
+    .footer-lowbar {
+        padding: 25px 0;
+        background-color: $footer-bg--lowbar;
+        @include grid-breakpoint(md) {
+            padding: 25px 0;
+        }
+        .footer-container {
+            text-align: center;
+            @include grid-breakpoint(md) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .footer-navigation__column {
+        @include grid-breakpoint(md) {
+            float: left;
+            width: 50%;
+        }
+    }
+
+    .footer__title {
+        margin: 0 0 20px 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 0.875rem;
+        color: #474b55;
+        line-height: 1.55;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    .footer__link {
+        display: block;
+        margin: 12px 0;
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 0.8125rem;
+        color: $footer-nav-link-color;
+        line-height: 1.4;
+        @include grid-breakpoint(md) {
+            transition: color 0.25s;
+            &:hover,
+            &:active,
+            &:focus {
+                color: #ffffff;
+            }
+        }
+    }
+
+    // Навигация в футере
+    .footer-navigation__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include grid-breakpoint(md) {
+            float: left;
+            display: inline-block;
+            margin: 0;
+        }
+        &:last-child {
+            margin: 0 0 50px 0;
+            @include grid-breakpoint(md) {
+                margin: 0 0 0 57px;
+            }
+            @include grid-breakpoint(lg) {
+                margin-left: 0 0 0 97px;
+            }
+        }
+        .list__item {
+            padding: 3px 0;
+            .item__link {
+                font-family: "Open Sans", "Arial", sans-serif;
+                font-weight: 400;
+                font-size: 0.8125rem;
+                color: $footer-nav-link-color;
+                line-height: 1.4;
+                @include grid-breakpoint(md) {
+                    transition: color 0.25s;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    // Подписка на рассылку
+    .footer-subscribe {
+        margin-top: 70px;
+        @include grid-breakpoint(sm) {
+            margin-top: 30px;
+        }
+        .footer-subscribe__btn {
+            display: flex;
+            align-items: center;
+            padding: 12px 32px 12px 32px;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: #ffffff;
+            background-color: transparent;
+            border: 1px solid $accent-color;
+            border-radius: 3px;
+            outline: none;
+            @include grid-breakpoint(md) {
+                transition: background-color 0.3s,
+                            color 0.3s;
+                &:hover,
+                &:focus {
+                    background-color: $accent-color;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    // Правовая информация
+    .legal-info {
+        margin: 0;
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 0.625rem;
+        color: #959595;
+        line-height: (20/10);
+        text-transform: uppercase;
+        text-align: center;
+        @include grid-breakpoint(md) {
+            text-align: left;
+        }
+        &--link {
+            display: block;
+            margin: 20px 0 15px 0;
+            @include grid-breakpoint(md) {
+                display: inline;
+                margin: 0;
+                transition: color 0.25s;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    // Ссылка на разработчиков
+    .dev-link {
+        display: block;
+        @include grid-breakpoint(md) {
+            display: flex;
+            align-items: center;
+            &:hover,
+            &:active,
+            &:focus {
+                .dev-link__text {
+                    color: #ffffff;
+                }
+            }
+        }
+        .dev-link__text {
+            margin-right: 20px;
+            font-family: "Open Sans", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 0.625rem;
+            color: #959595;
+            line-height: (20/10);
+            text-transform: uppercase;
+            @include grid-breakpoint(md) {
+                transition: color 0.25s;
+            }
+        }
+        .dev-link__logo {
+            width: 76px;
+            height: 14px;
+            fill: #ffffff;
+        }
+    }
+}

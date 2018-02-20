@@ -1,0 +1,33 @@
+.article {
+    @include grid-col(12 12 12 9);
+    margin: 50px 0 80px 0;
+    @include grid-breakpoint(md) {
+        margin: 60px 0 130px 0;
+    }
+    .article__title {
+        margin: 0 0 40px 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: $section-title-color;
+        line-height: (34/24);
+        @include grid-breakpoint(sm) {
+            font-weight: 700;
+            font-size: 2.25rem;
+            line-height: 1.33;
+        }
+        @include grid-breakpoint(md) {
+            margin: 0;
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 1.33;
+        }
+    }
+
+    .post-preview {
+        margin: 45px 0;
+        @include grid-breakpoint(md) {
+            margin: 60px 0;
+        }
+    }
+}

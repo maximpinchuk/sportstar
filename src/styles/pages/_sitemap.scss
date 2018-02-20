@@ -1,0 +1,116 @@
+.sitemap-col {
+    &:nth-child(1) {
+        @include grid-col(12 12 4);
+    }
+    &:nth-child(2) {
+        @include grid-col(12 12 6);
+    }
+}
+
+.sitemap-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .sitemap-list__item {
+        margin: 20px 0;
+
+        .sitemap-list__item__link {
+            margin: 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: #3b3b3b;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.sitemap-sublist {
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style: none;
+
+    .sitemap-sublist__item {
+        margin: 10px 0;
+
+        .sitemap-sublist__item__link {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 0.875rem;
+            color: #3b3b3b;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.catalog-categories-wrapper {
+    @include grid-row();
+    margin: -20px 0 0 0;
+}
+
+.catalog-categories-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include grid-breakpoint(md) {
+        width: 50%;
+    }
+    &:nth-child(2) {
+        margin-top: -10px;
+        @include grid-breakpoint(md) {
+            margin-top: 0;
+        }
+    }
+
+    .catalog-categories-list__item {
+        margin: 12px 0;
+
+        .catalog-categories-list__item__link {
+            position: relative;
+            padding: 0 22px 0 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 0.875rem;
+            color: #3b3b3b;
+            text-transform: uppercase;
+            &.opened {
+                .catalog-categories-list__item__link__icon {
+                    .plus-vertical {
+                        display: none;
+                    }
+                }
+            }
+
+            .catalog-categories-list__item__link__icon {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 8px;
+                height: 8px;
+                margin-top: -4px;
+                fill: #6f6f6f;
+            }
+        }
+    }
+}
+
+.catalog-subcategories {
+    display: none;
+    margin: 10px 0 25px 0;
+    padding: 0;
+    list-style: none;
+
+    .catalog-subcategories__item {
+        margin: 0;
+
+        .catalog-subcategories__item__link {
+            font-family: "Open Sans", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 0.875rem;
+            color: #3b3b3b;
+            line-height: (22/14);
+        }
+    }
+}

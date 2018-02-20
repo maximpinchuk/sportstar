@@ -1,0 +1,81 @@
+.post-preview {
+    .post-preview__text-content {
+        position: relative;
+        margin: 30px 0 0 0;
+        @include grid-breakpoint(md) {
+            margin: 24px 0 0 0;
+        }
+    }
+    .post-preview__image {
+        height: 180px;
+    }
+    .post-preview__date {
+        font-family: "Gotham", "Sans Serif", sans-serif;
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: $accent-color;
+        letter-spacing: 0.05em;
+    }
+    .post-preview__title {
+        display: block;
+        margin: 15px 0 6px 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 0.875rem;
+        color: #333333;
+        line-height: (22/14);
+        text-transform: uppercase;
+        @include grid-breakpoint(md) {
+            transition: color 0.25s;
+            &:hover,
+            &:active,
+            &:focus {
+                color: $accent-color;
+            }
+        }
+    }
+    .post-preview__excerpt {
+        margin: 0 0 25px 0;
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        color: #808080;
+        line-height: (22/14);
+        @include grid-breakpoint(md) {
+            margin: 0 0 15px 0;
+        }
+    }
+    .post-preview__link {
+        display: none;
+        @include grid-breakpoint(md) {
+            position: relative;
+            display: inline-block;
+            padding: 0 30px 0 0;
+            font-family: "Gotham", "Sans Serif", sans-serif;
+            font-weight: 500;
+            font-size: 0.75rem;
+            color: $accent-color;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            &:hover,
+            &:active,
+            &:focus {
+                .post-preview__link__icon {
+                    transform: translate3d(4px, -50%, 0);
+                }
+            }
+        }
+        .post-preview__link__icon {
+            @include grid-breakpoint(md) {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 15px;
+                height: 8px;
+                fill: $accent-color;
+                transition: transform 0.3s;
+                transform: translate3d(0, -50%, 0);
+            }
+        }
+    }
+}

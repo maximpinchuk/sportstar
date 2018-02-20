@@ -1,0 +1,55 @@
+.banner {
+    position: relative;
+    height: calc(100vh - 64px);
+    @include grid-breakpoint(md) {
+        height: 350px;
+    }
+    .banner__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #252425;
+            opacity: 0.6;
+        }
+    }
+
+    .banner__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .banner__title {
+        margin: 20px 0 0 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #ffffff;
+        line-height: (32/24);
+        @include grid-breakpoint(md) {
+            max-width: 50%;
+            font-size: 2rem;
+            line-height: (48/32);
+        }
+    }
+
+    .banner__date {
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: $accent-color;
+        letter-spacing: 0.05em;
+    }
+}

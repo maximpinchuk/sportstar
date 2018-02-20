@@ -1,0 +1,372 @@
+.order-form {
+    margin-top: 10px;
+}
+
+.order-issue {
+    @include grid-row();
+    flex-direction: column-reverse;
+    @include grid-breakpoint(md) {
+        flex-direction: row;
+    }
+
+    .order-issue__form {
+        @include grid-col(12 12 12 8);
+    }
+
+    .order-issue__info {
+        @include grid-col(12 12 12 3);
+        @include grid-offset(null null null 1);
+        margin: 50px 0 0 0;
+
+        .order-issue__info-item {
+            margin: 0 0 25px 0;
+            .info-item__icon {
+                height: 26px;
+            }
+
+            .info-item__title {
+                margin: 0;
+                font-family: "Gotham", "Arial", sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                color: #333333;
+                line-height: (40/16);
+            }
+
+            .info-item__descr {
+                margin: 0;
+                font-family: "Open Sans", "Arial", sans-serif;
+                font-weight: 400;
+                font-size: 0.875rem;
+                color: #343434;
+                line-height: (20/14);
+            }
+        }
+
+        .order-issue__info-link {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: $accent-color;
+            line-height: (40/12);
+            text-transform: uppercase;
+            @include grid-breakpoint(md) {
+                transition: color 0.3s;
+                &:hover,
+                &:focus {
+                    color: #04a7ea;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*
+ * Карточка товара
+ */
+.cart-product-col {
+    @include grid-col(12 12 12 6);
+    margin: 0 0 60px 0;
+}
+
+.cart-product-link {
+    @include grid-breakpoint(md) {
+        &:hover,
+        &:focus {
+            .cart-product-card {
+                box-shadow: 0 0 40px 0 rgba(191, 191, 191, 0.2);
+            }
+        }
+    }
+}
+
+.cart-product-card {
+    box-shadow: 0 0 15px 0 rgba(191, 191, 191, 0.1);
+    border: 1px solid #f8f8f8;
+    @include grid-breakpoint(md) {
+        display: flex;
+        transition: box-shadow 0.3s;
+    }
+
+    .cart-product-card__image {
+        width: 100%;
+        height: 200px;
+        @include grid-breakpoint(md) {
+            width: 50%;
+        }
+        img {
+            display: block;
+            width: 50%;
+            margin: auto;
+        }
+        @include grid-breakpoint(md) {
+            height: 200px;
+        }
+    }
+
+    .cart-product-card__product-info {
+        padding: 0 0 50px 15px;
+        @include grid-breakpoint(md) {
+            width: 50%;
+        }
+
+        .product-info__title {
+            margin: 20px 0 0 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 1.125rem;
+            color: #323232;
+            line-height: 1.33;
+            text-transform: uppercase;
+        }
+
+        .product-info__brand {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 0.6875rem;
+            color: #8e8e8e;
+            line-height: (22/11);
+            text-transform: uppercase;
+        }
+
+        .product-info__sizes-block {
+            margin: 12px 0 20px 0;
+
+            .sizes-block__col {
+                display: inline-block;
+                &:nth-child(1) {
+                    margin-right: 30px;
+                }
+            }
+
+            .sizes-block__label {
+                margin: 0 20px 0 0;
+                font-family: "Gotham", "Arial", sans-serif;
+                font-weight: 400;
+                font-size: 0.625rem;
+                color: #b8b8b8;
+                text-transform: uppercase;
+            }
+
+            .sizes-block__color-image {
+                width: 18px;
+                height: 18px;
+            }
+
+            .sizes-block__size {
+                font-family: "Gotham", "Arial", sans-serif;
+                font-weight: 400;
+                font-size: 0.875rem;
+                color: #323232;
+                text-transform: uppercase;
+            }
+        }
+
+        .product-info__price {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: $accent-color;
+            span {
+                font-size: 0.875rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+
+/*
+ * Увеличение и уменьшение кол-ва товаров и удаление карточки
+ */
+.product-control-panel {
+    margin: 40px 0 0 0;
+    @include grid-breakpoint(md) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-ammount {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 30px 0;
+        @include grid-breakpoint(md) {
+            margin: 0 90px 0 0;
+        }
+        .product-ammount__btn {
+            position: relative;
+            width: 55px;
+            height: 40px;
+            background-color: #ffffff;
+            border: 1px solid #f9f9f9;
+            outline: none;
+            @include grid-breakpoint(md) {
+                transition: background-color 0.3s;
+                &:hover,
+                &:focus {
+                    background-color: $accent-color;
+                    &:before,
+                    &:after {
+                        background-color: #ffffff;
+                    }
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 12px;
+                height: 2px;
+                margin-left: -5px;
+                background-color: #252425;
+                @include grid-breakpoint(md) {
+                    transition: background-color 0.3s;
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 2px;
+                height: 12px;
+                margin-top: -5px;
+                background-color: #252425;
+                @include grid-breakpoint(md) {
+                    transition: background-color 0.3s;
+                }
+            }
+
+            &.minus {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        .product-ammount__control {
+            width: 55px;
+            height: 40px;
+            margin: 0 10px;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: #252425;
+            text-align: center;
+            background-color: #f9f9f9;
+            border: 1px solid #f9f9f9;
+            outline: none;
+            -webkit-appearance: none;
+            @include grid-breakpoint(md) {
+                // transition: background-color 0.3s;
+                &:focus {
+                    // background-color: $accent-color;
+                }
+            }
+        }
+    }
+
+    .product-remove {
+        text-align: center;
+        @include grid-breakpoint(md) {
+            text-align: left;
+        }
+        .product-remove__link {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 0.625rem;
+            color: #d80000;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+/*
+ * Информация о заказе
+ */
+.order-info {
+    @include grid-row();
+    align-items: flex-end;
+
+    .order-info-col {
+        @include grid-col(12 12 12 6);
+    }
+
+    .order-info-table {
+        display: table;
+
+        .order-info-table__row {
+            display: table-row;
+            &:last-child {
+                .order-info-table__cell {
+                    padding: 25px 0 0 0;
+                    @include grid-breakpoint(md) {
+                        padding: 35px 0 0 0;
+                    }
+                }
+            }
+        }
+
+        .order-info-table__cell {
+            display: table-cell;
+            padding: 5px 0;
+            @include grid-breakpoint(md) {
+                padding: 8px 0 0 0;
+            }
+        }
+
+        .order-info-table__label {
+            margin: 0 50px 0 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: #252425;
+            text-transform: uppercase;
+            @include grid-breakpoint(md) {
+                margin: 0 90px 0 0;
+                font-size: 0.875rem;
+            }
+            span {
+                color: $accent-color;
+            }
+            &--huge {
+                font-size: 1rem;
+                @include grid-breakpoint(md) {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        .order-info-table__value {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: $accent-color;
+            text-transform: uppercase;
+            @include grid-breakpoint(md) {
+                font-size: 0.875rem;
+            }
+            &--huge {
+                font-size: 1rem;
+                @include grid-breakpoint(md) {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+
+    .order-info-btn {
+        margin: 70px 0 0 0;
+        @include grid-breakpoint(md) {
+            width: 220px;
+            margin: 0;
+        }
+    }
+}

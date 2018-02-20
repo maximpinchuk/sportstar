@@ -1,0 +1,386 @@
+// Баннер на главной
+.banner-slider {
+    height: calc(100vh - 64px);
+    @include grid-breakpoint(md) {
+        height: calc(100vh - 168px);
+    }
+    .banner-slider__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #252425;
+            opacity: 0.6;
+        }
+    }
+    .banner-slider__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 15px;
+        .banner-slider__content__title {
+            margin: 0 0 30px 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 500;
+            font-size: 1.375rem;
+            color: #ffffff;
+            line-height: (34/22);
+            @include grid-breakpoint(md) {
+                max-width: 50%;
+                margin: 0 0 43px 0;
+                font-size: 2rem;
+                line-height: (48/32);
+            }
+        }
+    }
+    .banner-slider__navigation-block {
+        left: 15px;
+        bottom: 40px;
+        z-index: 5;
+        @include grid-breakpoint(md) {
+            right: 15px;
+            bottom: -2px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .banner-slider__pagination {
+            float: left;
+            width: 60px;
+            padding: 0 30px 0 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 900;
+            font-size: 0.75rem;
+            color: #ffffff;
+            line-height: (42/12);
+            .pagination-total {
+                color: #507582;
+            }
+        }
+    }
+}
+
+
+// Popular section
+.popular-column {
+    @include grid-col(12 12 12 6);
+    @include grid-breakpoint(md) {
+        margin: 40px 0 100px 0;
+    }
+    &:nth-child(1) {
+        .popular-item {
+            margin-top: 50px;
+            @include grid-breakpoint(md) {
+                margin-top: 0;
+            }
+        }
+    }
+    &:nth-child(2) {
+        margin-top: -100px;
+        @include grid-breakpoint(md) {
+            margin-top: 40px;
+        }
+    }
+}
+.popular-item {
+    position: relative;
+    margin: 100px 0;
+    @include grid-breakpoint(md) {
+        margin: 0 0 0 10px;
+    }
+    &--large {
+        height: 265px;
+        @include grid-breakpoint(md) {
+            height: 500px;
+        }
+    }
+    &--small {
+        height: 265px;
+        @include grid-breakpoint(md) {
+            height: 235px;
+            &:nth-child(1) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .popular-item__link {
+        display: block;
+        height: 100%;
+        @include grid-breakpoint(md) {
+            &:hover,
+            &:active,
+            &:focus {
+                .popular-item__image {
+                    &:after {
+                        opacity: 0.1;
+                    }
+                }
+                .popular-item__descr {
+                    box-shadow: none;
+                    transform: translate3d(10px, -10px, 0);
+                }
+            }
+        }
+    }
+    .popular-item__image {
+        position: relative;
+        height: 100%;
+        &:after {
+            content: "";
+            @include grid-breakpoint(md) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000000;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+        }
+    }
+    .popular-item__descr {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        z-index: 2;
+        padding: 22px 25px;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: #353535;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #ffffff;
+        outline: none;
+        box-shadow: 1px 1px 50px 1px rgba(0, 0, 0, 0.2);
+        transform: translate3d(-50%, 0, 0);
+        @include grid-breakpoint(md) {
+            bottom: -10px;
+            left: -10px;
+            transform: translate3d(0, 0, 0);
+            transition: box-shadow 0.3s, transform 0.25s;
+        }
+    }
+}
+
+
+
+.catalog-slider__hint {
+    margin-top: 36px;
+    @include grid-breakpoint(sm) {
+        display: none;
+    }
+    .hint__text {
+        margin: 0 0 10px 0;
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 0.75rem;
+        color: #bfbfbf;
+        text-align: center;
+    }
+    .hint__icons {
+        display: flex;
+        justify-content: center;
+    }
+    .hint__icon {
+        float: left;
+        margin: 0 5px;
+        fill: #bfbfbf;
+    }
+}
+
+
+
+// CTA блок
+.cta-block {
+    margin: 70px auto;
+    @include grid-breakpoint(md) {
+        display: flex;
+        margin: 130px auto;
+    }
+    .cta-block__content {
+        padding: 40px 15px 0 15px;
+        background-color: $accent-color;
+        @include grid-breakpoint(md) {
+            width: 42.2222222%;
+            padding: 120px 0 90px 58px;
+        }
+        .cta-block__title {
+            margin: 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #ffffff;
+            line-height: (34/24);
+            @include grid-breakpoint(md) {
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: auto;
+            }
+            @include grid-breakpoint(lg) {
+                font-size: 2.75rem;
+            }
+        }
+        .cta-block__text-wrapper {
+            position: relative;
+            .cta-block__subtitle {
+                margin: 30px 0 0 0;
+                padding: 0 0 80px 0;
+                font-family: "Open Sans", "Arial", sans-serif;
+                font-weight: 400;
+                font-size: 1rem;
+                color: #ffffff;
+                line-height: (24/16);
+                @include grid-breakpoint(md) {
+                    padding: 0 140px 0 0;
+                }
+                @include grid-breakpoint(lg) {
+                    font-size: 1.125rem;
+                    line-height: (28/18);
+                    padding: 0 180px 0 0;
+                }
+            }
+            .cta-block__btn {
+                position: absolute;
+                bottom: 0;
+                right: 50%;
+                text-align: center;
+                transform: translate3d(50%, 50%, 0);
+                @include grid-breakpoint(md) {
+                    bottom: 50%;
+                    right: 0;
+                    transform: translate3d(50%, 50%, 0);
+                }
+            }
+        }
+    }
+    .cta-block__image {
+        height: 234px;
+        @include grid-breakpoint(md) {
+            width: 57.7777778%;
+            height: auto;
+            margin-top: 50px;
+        }
+    }
+}
+
+
+// Контейнер для слайдера с новинками
+.novelties {
+    position: relative;
+    margin: 60px 0 0 0;
+    @include grid-breakpoint(md) {
+        margin: 100px 0 0 0;
+    }
+}
+
+
+
+// Описание бренда MadWave
+.brand-descr {
+    margin: 0;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #3f3f3f;
+    line-height: (24/16);
+    @include grid-breakpoint(md) {
+        margin: 10px 90px;
+        font-size: 1.125rem;
+        line-height: (28/18);
+        text-align: center;
+    }
+    @include grid-breakpoint(xl) {
+        margin: 10px 120px;
+    }
+}
+
+
+
+// Слайдер с партнерами
+.partners {
+    position: relative;
+    margin-top: 50px;
+}
+.partners-slider {
+    .partner-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 104px;
+        @include grid-breakpoint(md) {
+            // width: 50%;
+            // padding: 0 15px;
+        }
+        .partner-item__image {
+            max-width: 60%;
+        }
+    }
+}
+
+
+
+// Слайдер С новостями и статьями
+
+/*
+ * Элемент с классом .posts-slider__hidden-block скрывает от видимости левую
+ * прокручиваемую часть слайдера с новостями/статьями
+ */
+.posts-slider__hidden-block {
+    @include grid-breakpoint(sm) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.news-slider__navigation-block,
+.articles-slider__navigation-block {
+    right: 50%;
+    transform: translate3d(50%, 0, 0);
+    @include grid-breakpoint(sm) {
+        top: -115px;
+        right: 15px;
+        z-index: 3;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+// SEO блок
+.shop-descr {
+    margin-top: 0px;
+    @include grid-breakpoint(md) {
+        margin-top: 65px;
+    }
+    .shop-descr__text {
+        margin: 3px 0;
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 0.75rem;
+        color: #3f3f3f;
+        line-height: (18/12);
+        @include grid-breakpoint(md) {
+            padding-right: 30px;
+            font-size: 0.875rem;
+            line-height: (22/14);
+        }
+    }
+}

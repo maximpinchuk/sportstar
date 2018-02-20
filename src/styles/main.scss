@@ -1,0 +1,121 @@
+/*
+ * 1. Vendors
+ */
+@import 'vendors/swiper';
+@import 'vendors/styleselect';
+@import 'vendors/simplebar';
+@import 'vendors/nouislider';
+@import 'vendors/native-slider-toggle';
+@import 'vendors/remodal';
+
+
+/*
+ * 2. Vendors Extensions
+ */
+@import 'vendors-extensions/swiper';
+@import 'vendors-extensions/styleselect';
+@import 'vendors-extensions/simplebar';
+@import 'vendors-extensions/nouislider';
+@import 'vendors-extensions/native-slider-toggle';
+@import 'vendors-extensions/remodal';
+
+
+/*
+ * 3. Utils
+ */
+@import 'utils/variables';
+
+
+/*
+ * 4. Base
+ */
+@import 'base/normalize';
+@import 'base/typography';
+
+
+/*
+ * 5. Layout
+ */
+@import 'layout/grid';
+@import 'layout/main';
+@import 'layout/header';
+@import 'layout/adaptive-nav';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/article';
+@import 'layout/catalog-filter';
+@import 'layout/modal-filter';
+@import 'layout/post-article';
+@import 'layout/article-section';
+@import 'layout/form';
+@import 'layout/quickview';
+
+
+/*
+ * 6. Components
+ */
+@import 'components/search';
+@import 'components/image-wrapper';
+@import 'components/buttons';
+@import 'components/slider-navigation';
+@import 'components/section';
+@import 'components/product-card';
+@import 'components/tabs';
+@import 'components/post-preview';
+@import 'components/breadcrumbs';
+@import 'components/collapse';
+@import 'components/sidebar-navigation';
+@import 'components/pagination';
+@import 'components/select';
+@import 'components/range-slider';
+@import 'components/modal';
+@import 'components/product-item';
+@import 'components/faq-item';
+@import 'components/stars';
+@import 'components/banner';
+@import 'components/post-share';
+@import 'components/account-history-item';
+@import 'components/subscribe-form';
+@import 'components/auth';
+@import 'components/rating';
+
+
+/*
+ * 7. Pages
+ */
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/catalog';
+@import 'pages/product-page';
+@import 'pages/cart';
+@import 'pages/contacts';
+@import 'pages/error-404';
+@import 'pages/sitemap';
+@import 'pages/conf-policy';
+
+
+// Переместить в другое место, стоит тут, потому что перекрывает стили
+@import 'utils/helpers';
+
+
+
+// Extra styles
+body {
+    &.modal-open {
+        overflow-y: hidden;
+    }
+}
+
+.page__title {
+    @include grid-offset(null null null 3);
+    margin: 60px 0 0 0;
+    font-family: "Gotham", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #333333;
+    line-height: (34/24);
+    @include grid-breakpoint(md) {
+        font-size: 2.5rem;
+        line-height: 1.33;
+    }
+}

@@ -1,0 +1,137 @@
+.btn {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 22px 24px;
+    font-family: "Gotham", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    // box-shadow: 0 0 50px -5px $accent-color;
+    // transition: box-shadow 4s;
+    @include grid-breakpoint(md) {
+        padding: 22px 35px;
+        transition: color 0.3s 0.5s;
+    }
+
+    &:after,
+    &:before {
+        content: "";
+        @include grid-breakpoint(md) {
+            position: absolute;
+            top: 0;
+            left: -50%;
+            right: -50%;
+            z-index: -1;
+            height: 0;
+            padding-bottom: 200%;
+            // background: darken($accent-color, 1%);
+            // background-color: rgba(63, 184, 234, 0.7);
+            border-radius: 230px;
+            transition: transform 1.3s, background-color 3.2s;
+        }
+    }
+
+    &:after {
+        transform: translate3d(-5%, 4em, 0) rotate(-45deg);
+    }
+    &:before {
+        transform: translate3d(5%, 4em, 0) rotate(0deg);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        // box-shadow: 0 0 50px -5px darken($accent-color, 20%);
+        // box-shadow: 0 0 50px -5px rgba(63, 184, 234, 0.8);
+        &:before,
+        &:after {
+            transform: translate3d(0, -5em, 0) rotate(180deg);
+            // background: darken($accent-color, 20%);
+            // background-color: rgba(63, 184, 234, 0.5);
+        }
+    }
+
+    &--accent {
+        color: #ffffff;
+        background-color: $accent-color;
+        &:after,
+        &:before {
+            mix-blend-mode: color-burn;
+            background-color: rgba(63, 184, 234, 0.7);
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            &:before,
+            &:after {
+                background-color: rgba(63, 184, 234, 0.5);
+            }
+        }
+    }
+
+    &--default {
+        color: $accent-color;
+        background-color: #ffffff;
+        &:after,
+        &:before {
+            mix-blend-mode: multiply;
+            background-color: rgba(63, 184, 234, 0.7);
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            color: #ffffff;
+            &:before,
+            &:after {
+                background-color: rgba(63, 184, 234, 0.5);
+            }
+        }
+    }
+}
+
+
+
+/*
+ * Filter buttons
+ */
+.btn-group {
+    display: flex;
+    justify-content: center;
+
+    &.filter-item__btn-group {
+        display: flex;
+        width: 100%;
+        margin: 15px 0 5px 0;
+        @include grid-breakpoint(md) {
+            display: none;
+        }
+    }
+}
+
+.btn-filter {
+    margin: 0 5px;
+    padding: 10px 25px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 0.675rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid $accent-color;
+    outline: none;
+    border-radius: 5px;
+
+    &--accent {
+        color: #ffffff;
+        background-color: $accent-color;
+    }
+
+    &--default {
+        color: #252425;
+        background-color: #ffffff;
+        border: 1px solid #252425;
+    }
+}

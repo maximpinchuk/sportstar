@@ -1,0 +1,24 @@
+[data-simplebar = "init"] {
+    border: 1px solid #e2e2e2;
+}
+
+.simplebar-scroll-content {
+    max-height: 210px;
+    padding: 5px 13px 0 13px;
+    background-color: #fbfbfb;
+}
+
+.simplebar-scrollbar {
+    right: 6px;
+    width: 4px;
+    background-color: #e2e2e2;
+    border-radius: 5px;
+    @media screen and (min-width: 992px) {
+        transform-origin: center;
+        transition: transform 0.3s;
+        &:hover {
+            cursor: pointer;
+            transform: scale3d(1.3, 1, 1);
+        }
+    }
+}

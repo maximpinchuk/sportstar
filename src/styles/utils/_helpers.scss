@@ -1,0 +1,202 @@
+// Полностью прячет элемент
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+// Выравнивание текста по горизонтали
+
+/*
+ * Пример использования: добавление класса .align-center--xs будет означать
+ * следующее - элемент будет выравнен по центру при ширине экрана равной или
+ * большей 576px. Чтобы при последующих разрешениях экрана перебить эти свойтсва
+ * необходимо добавить другой класс, например .align-left--md.
+ */
+
+.align-center {
+    text-align: center;
+    &--xs {
+        @media screen and (min-width: 576px) {
+            text-align: center;
+        }
+    }
+    &--sm {
+        @media screen and (min-width: 768px) {
+            text-align: center;
+        }
+    }
+    &--md {
+        @media screen and (min-width: 992px) {
+            text-align: center;
+        }
+    }
+    &--lg {
+        @media screen and (min-width: 1200px) {
+            text-align: center;
+        }
+    }
+    &--xl {
+        @media screen and (min-width: 1600px) {
+            text-align: center;
+        }
+    }
+}
+.align-left {
+    text-align: left;
+    &--xs {
+        @media screen and (min-width: 576px) {
+            text-align: left;
+        }
+    }
+    &--sm {
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
+    }
+    &--md {
+        @media screen and (min-width: 992px) {
+            text-align: left;
+        }
+    }
+    &--lg {
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
+    }
+    &--xl {
+        @media screen and (min-width: 1600px) {
+            text-align: left;
+        }
+    }
+}
+.align-right {
+    text-align: right;
+    &--xs {
+        @media screen and (min-width: 576px) {
+            text-align: right;
+        }
+    }
+    &--sm {
+        @media screen and (min-width: 768px) {
+            text-align: right;
+        }
+    }
+    &--md {
+        @media screen and (min-width: 992px) {
+            text-align: right;
+        }
+    }
+    &--lg {
+        @media screen and (min-width: 1200px) {
+            text-align: right;
+        }
+    }
+    &--xl {
+        @media screen and (min-width: 1600px) {
+            text-align: right;
+        }
+    }
+}
+
+// Удаление внутренних отступов у элемента
+.no-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+// удаление внешних отступов у элементов
+.no-margin-vertical {
+    &--xs {
+        @media screen and (min-width: 576px) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &--sm {
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &--md {
+        @media screen and (min-width: 992px) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &--lg {
+        @media screen and (min-width: 1200px) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &--xl {
+        @media screen and (min-width: 1600px) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+.no-margin-top {
+    &--xs {
+        @media screen and (min-width: 576px) {
+            margin-top: 0;
+        }
+    }
+    &--sm {
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+    &--md {
+        @media screen and (min-width: 992px) {
+            margin-top: 0;
+        }
+    }
+    &--lg {
+        @media screen and (min-width: 1200px) {
+            margin-top: 0;
+        }
+    }
+    &--xl {
+        @media screen and (min-width: 1600px) {
+            margin-top: 0;
+        }
+    }
+}
+
+
+
+.no-margin-bottom {
+    &--xs {
+        @media screen and (min-width: 576px) {
+            margin-bottom: 0;
+        }
+    }
+    &--sm {
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+    &--md {
+        @media screen and (min-width: 992px) {
+            margin-bottom: 0;
+        }
+    }
+    &--lg {
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 0;
+        }
+    }
+    &--xl {
+        @media screen and (min-width: 1600px) {
+            margin-bottom: 0;
+        }
+    }
+}

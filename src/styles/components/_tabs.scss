@@ -1,0 +1,79 @@
+// Табы
+.tabs-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &.catalog-goods {
+        @include grid-breakpoint(md) {
+            margin-left: 140px;
+        }
+    }
+    &.product-page {
+        margin: 80px 0 0 0;
+    }
+    .tabs-nav__item {
+        &:first-child {
+            // float: left;
+            @include grid-breakpoint(sm) {
+                float: left;
+            }
+        }
+        .tabs-nav__item__link {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #c8e2ed;
+            line-height: (40/24);
+            transition: color 0.25s;
+            &:before {
+                content: attr(data-tab);
+                margin: 0 15px 0 0;
+                font-size: 0.625rem;
+                letter-spacing: 0.1em;
+                @include grid-breakpoint(sm) {
+                    font-size: 0.75rem;
+                }
+            }
+            @include grid-breakpoint(sm) {
+                margin: 0 40px 0 0;
+                font-size: 2.125rem;
+                line-height: 1;
+            }
+            @include grid-breakpoint(md) {
+                margin: 0 50px 0 0;
+                font-size: 2.5rem;
+            }
+        }
+        &.active {
+            .tabs-nav__item__link {
+                color: #252425;
+            }
+        }
+    }
+}
+.tabs-container {
+    margin: 80px 0 0 0;
+    @include grid-breakpoint(md) {
+        clear: both;
+        margin: 90px 0 0 0;
+    }
+    &.reviews-faq {
+        margin: 50px 0 0 0;
+        @include grid-breakpoint(md) {
+            margin: 50px 0 0 0;
+        }
+    }
+    &.news-and-articles {
+        margin: 60px 0 110px 0;
+        @include grid-breakpoint(sm) {
+            margin: 80px -15px 0 -15px;
+        }
+    }
+    .tab {
+        position: relative;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}

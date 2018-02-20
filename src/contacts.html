@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Контакты | Sportstar</title>
+        <meta name="description" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles/main.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    </head>
+    <body>
+        //= partials/navigation/adaptive-nav.html
+        //= partials/header.html
+
+        <main>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a class="breadcrumbs__item" href="index.html" aria-label="главная">главная</a>
+                    <a class="breadcrumbs__item breadcrumbs__item--current" href="#" aria-label="контакты">контакты</a>
+                </div>
+                <h1 class="main__title">Контакты</h1>
+                <div class="contacts-wrapper">
+                    <div class="contacts-nav">
+                        <p class="contacts-nav__text">Выберите свой город и узнайте, где вы можете приобрести товары нашей компании.</p>
+                        <div class="contacts-nav__city-select-block">
+                            <span class="city-select-block__title">ваш город</span>
+                            <select class="city-select-block__select select-contacts--city" name="city">
+                                <option value="">Выберите город</option>
+                                <option value="Minsk">Минск</option>
+                                <option value="Brest">Брест</option>
+                            </select>
+                            <div class="shop-info-wrapper"></div>
+                        </div>
+                    </div>
+                    <div class="contacts-map" id="map"></div>
+                </div>
+            </div>
+        </main>
+
+        //= partials/footer.html
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD804PeA6IKU_K2JdZW70JeITK9JR5IDCA&callback=initMap" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+.csspositionsticky {
+    .sidebar-nav {
+        @include grid-breakpoint(md) {
+            position: sticky;
+            top: 30px;
+        }
+    }
+}
+
+.no-csspositionsticky {
+    .sidebar-nav {
+        &.sticky {
+            @include grid-breakpoint(md) {
+                position: fixed;
+                top: 30px;
+            }
+        }
+    }
+}
+
+.sidebar-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .sidebar-nav__item {
+        padding: 8px 0;
+        .sidebar-nav__item__link {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 900;
+            font-size: 0.875rem;
+            color: #3b3b3b;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            @include grid-breakpoint(md) {
+                transition: color 0.3s;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $accent-color;
+                }
+            }
+            &--current {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .sidebar-nav-subnav {
+        display: none;
+        @include grid-breakpoint(md) {
+            display: block;
+            margin: 15px 0 0 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-nav-subnav__item {
+            @include grid-breakpoint(md) {
+                position: relative;
+                margin: 7px 0;
+            }
+            .sidebar-nav-subnav__item__link {
+                @include grid-breakpoint(md) {
+                    padding: 0 0 0 15px;
+                    font-family: "Gotham", "Arial", sans-serif;
+                    font-weight: 700;
+                    font-size: 0.75rem;
+                    color: #464646;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    transition: color 0.25s;
+                    &:hover,
+                    &:focus {
+                        color: $accent-color;
+                    }
+                }
+                &--current {
+                    @include grid-breakpoint(md) {
+                        color: $accent-color;
+                    }
+                    &:before {
+                        @include grid-breakpoint(md) {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            margin-top: -2px;
+                            width: 4px;
+                            height: 4px;
+                            background-color: $accent-color;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

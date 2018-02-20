@@ -1,0 +1,33 @@
+.post-share {
+    clear: both;
+    margin: 50px 0 0 0;
+    @include grid-breakpoint(sm) {
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+    .post-share__title {
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 900;
+        font-size: 0.875rem;
+        color: #343434;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+}
+
+.social-share {
+    margin: 20px 0 0 -15px;
+    @include grid-breakpoint(sm) {
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        margin: 5px 0 0 60px;
+    }
+    .social-share__link {
+        margin: 0 17px;
+        .social-share__link__icon {
+            fill: $accent-color;
+        }
+    }
+}

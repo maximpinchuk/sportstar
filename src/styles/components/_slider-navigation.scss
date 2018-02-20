@@ -1,0 +1,113 @@
+// Навигация для слайдера с квадратными кнопками в навигации
+.slider-navigation__wrapper {
+    position: relative;
+}
+.slider-navigation {
+    position: absolute;
+    .prev-btn,
+    .next-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 55px;
+        height: 40px;
+        background-color: #ffffff;
+        .prev-btn__icon,
+        .next-btn__icon {
+            width: 15px;
+            height: 8px;
+            fill: #252425;
+            @include grid-breakpoint(md) {
+                transition: fill 0.3s;
+            }
+        }
+        @include grid-breakpoint(md) {
+            cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $accent-color;
+                .prev-btn__icon,
+                .next-btn__icon {
+                    fill: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+
+
+// Навишация для слайдера с товарами
+.catalog-slider__prev,
+.catalog-slider__next {
+    display: none;
+    @include grid-breakpoint(sm) {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 55px;
+        height: 40px;
+        background-color: #ffffff;
+        transform: translate3d(0, -50%, 0);
+        &.catalog-leaders--prev,
+        &.catalog-leaders--next,
+        &.catalog-stoke--prev,
+        &.catalog-stoke--next,
+        &.catalog-novelty--prev,
+        &.catalog-novelty--next {
+            transform: translate3d(0, -80px, 0);
+        }
+    }
+    @include grid-breakpoint(md) {
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $accent-color;
+            .catalog-slider__prev__icon,
+            .catalog-slider__next__icon {
+                fill: #ffffff;
+            }
+        }
+    }
+    .catalog-slider__prev__icon,
+    .catalog-slider__next__icon {
+        @include grid-breakpoint(sm) {
+            width: 15px;
+            height: 8px;
+            fill: #252425;
+        }
+        @include grid-breakpoint(md) {
+            transition: fill 0.3s;
+        }
+    }
+}
+.catalog-slider__prev {
+    @include grid-breakpoint(sm) {
+        left: -30px;
+    }
+    @include grid-breakpoint(md) {
+        left: -40px;
+    }
+    @include grid-breakpoint(lg) {
+        left: -60px;
+    }
+}
+.catalog-slider__next {
+    @include grid-breakpoint(sm) {
+        right: -30px;
+    }
+    @include grid-breakpoint(md) {
+        right: -40px;
+    }
+    @include grid-breakpoint(lg) {
+        right: -60px;
+    }
+}

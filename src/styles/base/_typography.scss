@@ -1,0 +1,32 @@
+// GothamPro Black
+@font-face {
+    font-family: 'Gotham';
+	src: url('../fonts/GothamPro-Black.eot'),
+		url('../fonts/GothamPro-Black.woff2'),
+		url('../fonts/GothamPro-Black.woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: fallback;
+}
+
+// GothamPro Bold
+@font-face {
+    font-family: 'Gotham';
+	src: url('../fonts/GothamPro-Bold.eot'),
+		url('../fonts/GothamPro-Bold.woff2'),
+		url('../fonts/GothamPro-Bold.woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: fallback;
+}
+
+// GothamPro Medium
+@font-face {
+    font-family: 'Gotham';
+	src: url('../fonts/GothamPro-Medium.eot'),
+		url('../fonts/GothamPro-Medium.woff2'),
+		url('../fonts/GothamPro-Medium.woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: fallback;
+}

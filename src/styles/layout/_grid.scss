@@ -1,0 +1,60 @@
+@import "fast-grid/default";
+@import "fast-grid/functions";
+@import "fast-grid/container";
+@import "fast-grid/row";
+@import "fast-grid/col";
+@import "fast-grid/translate";
+
+
+
+/* Container element */
+.container {
+	margin: auto;
+	padding: 0 15px;
+	@include grid-breakpoint(sm) {
+		width: 750px;
+	}
+
+	@include grid-breakpoint(md) {
+		width: 990px;
+	}
+
+	@include grid-breakpoint(lg) {
+		width: 1170px;
+	}
+
+	@include grid-breakpoint(xl) {
+		width: 1470px;
+	}
+}
+
+/* Full width container */
+.container--full {
+	padding: 0;
+}
+
+/* Row element */
+.row {
+	position: relative;
+	@include grid-row();
+}
+
+/* Columns */
+.col_3 {
+	@include grid-col(12 12 3);
+}
+.col_4 {
+	@include grid-col(12 12 4);
+}
+.col_6 {
+	@include grid-col(12 12 6);
+}
+.col_8 {
+	@include grid-col(12 12 8);
+}
+.col_9 {
+	@include grid-col(12 12 9);
+}
+.col_12 {
+	@include grid-col(12);
+}

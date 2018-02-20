@@ -1,0 +1,49 @@
+.section {
+    margin: 70px auto;
+    @include grid-breakpoint(md) {
+        margin: 130px auto;
+    }
+    &.cart-section {
+        @include grid-breakpoint(md) {
+            margin: 90px auto 130px auto;
+        }
+    }
+    .section__title {
+        margin: 0 0 40px 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: $section-title-color;
+        line-height: (34/24);
+        &.align-center {
+            text-align: center;
+            @include grid-breakpoint(md) {
+                text-align: center;
+            }
+        }
+        &.align-left {
+            @include grid-breakpoint(md) {
+                text-align: left;
+            }
+        }
+        @include grid-breakpoint(sm) {
+            margin: 0 0 30px 0;
+            padding: 0 60px;
+            font-weight: 700;
+            font-size: 2.25rem;
+            line-height: 1.33;
+            text-align: center;
+        }
+        @include grid-breakpoint(md) {
+            margin: 0 0 70px 0;
+            padding: 0 120px;
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 1.33;
+        }
+        &.no-padding {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}

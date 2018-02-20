@@ -1,0 +1,409 @@
+<a class="filter-form__link link-collapse" href="#" aria-label="Фильтрация">
+    <span class="filter-form__link__text">Фильтрация</span>
+    <div class="icon-wrapper">
+        <img class="icon-wrapper__icon" src="img/icons/filter.svg" alt="Фильтрация">
+    </div>
+</a>
+<a class="filter-form__link--fixed" href="#" aria-label="Фильтрация">
+    <div class="icon-wrapper">
+        <img class="icon-wrapper__icon" src="img/icons/filter.svg" alt="Фильтрация">
+    </div>
+</a>
+<div class="filter-form__collapse">
+    <!-- <form id="filter-form" action="example.php"> -->
+        <div class="catalog-filter">
+
+            <!-- Раздел -->
+            <fieldset class="catalog-filter__item filter-item collapse-block filter-item--opened" id="section-filter">
+                <a class="collapse__link filter-item__link opened" href="#" aria-label="Раздел">Раздел
+                    <svg class="collapse__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                        <rect y="3" width="8" height="2"/>
+                        <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                    </svg>
+                </a>
+                <div class="collapse__content filter-item__content">
+                    <ul class="catalog-categories">
+                        <li class="catalog-categories__item">
+                            <input class="visually-hidden" id="sport-plavanie" type="radio" name="category" value="спортивное плавание">
+                            <label class="catalog-categories__item__label" for="sport-plavanie">спортивное плавание</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="visually-hidden" id="vodnoe-polo" type="radio" name="category" value="водное поло">
+                            <label class="catalog-categories__item__label" for="vodnoe-polo">водное поло</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="visually-hidden" id="akvaaerobica" type="radio" name="category" value="аквааэробика">
+                            <label class="catalog-categories__item__label" for="akvaaerobica">аквааэробика</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="visually-hidden" id="diving" type="radio" name="category" value="дайвинг">
+                            <label class="catalog-categories__item__label" for="diving">дайвинг</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="visually-hidden" id="clothes-and-shoes" type="radio" name="category" value="одежда и обувь">
+                            <label class="catalog-categories__item__label" for="clothes-and-shoes">одежда и обувь</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="visually-hidden" id="fitness" type="radio" name="category" value="фитнес">
+                            <label class="catalog-categories__item__label" for="fitness">фитнес</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="visually-hidden" id="other" type="radio" name="category" value="другое">
+                            <label class="catalog-categories__item__label" for="other">другое</label>
+                        </li>
+                    </ul>
+                    <div class="filter-item__btn-group btn-group">
+                        <button class="btn-filter btn-filter--small btn-filter--accent submit" data-dismiss="modal" aria-label="Принять" tabindex="-1">принять</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Категория -->
+            <fieldset class="catalog-filter__item filter-item collapse-block" id="category-filter">
+                <a class="collapse__link filter-item__link" href="#" aria-label="Категория">Категория
+                    <svg class="collapse__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                        <rect y="3" width="8" height="2"/>
+                        <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                    </svg>
+                </a>
+                <div class="collapse__content filter-item__content">
+                    <ul class="catalog-categories">
+                        <li class="catalog-categories__item collapse-block">
+                            <a class="subcategory-link subcategory-link" href="#" aria-label="Подкатегория 1">Подкатегория 1</a>
+                            <ul class="catalog-categories collapse__content subcategory">
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory11" type="radio" name="subcategory" value="Подкатегория 11">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory11">Подкатегория 11</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory12" type="radio" name="subcategory" value="Подкатегория 12">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory12">Подкатегория 12</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory13" type="radio" name="subcategory" value="Подкатегория 13">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory13">Подкатегория 13</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory14" type="radio" name="subcategory" value="Подкатегория 14">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory14">Подкатегория 14</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory15" type="radio" name="subcategory" value="Подкатегория 15">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory15">Подкатегория 15</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="catalog-categories__item collapse-block">
+                            <a class="subcategory-link subcategory-link" href="#" aria-label="Подкатегория 2">Подкатегория 2</a>
+                            <ul class="catalog-categories collapse__content subcategory">
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory21" type="radio" name="subcategory" value="Подкатегория 21">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory21">Подкатегория 21</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory22" type="radio" name="subcategory" value="Подкатегория 22">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory22">Подкатегория 22</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory23" type="radio" name="subcategory" value="Подкатегория 23">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory23">Подкатегория 23</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory24" type="radio" name="subcategory" value="Подкатегория 24">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory24">Подкатегория 24</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory25" type="radio" name="subcategory" value="Подкатегория 25">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory25">Подкатегория 25</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="catalog-categories__item collapse-block">
+                            <a class="subcategory-link subcategory-link" href="#" aria-label="Подкатегория 3">Подкатегория 3</a>
+                            <ul class="catalog-categories collapse__content subcategory">
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory31" type="radio" name="subcategory" value="Подкатегория 31">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory31">Подкатегория 31</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory32" type="radio" name="subcategory" value="Подкатегория 32">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory32">Подкатегория 32</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory33" type="radio" name="subcategory" value="Подкатегория 33">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory33">Подкатегория 33</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="catalog-categories__item collapse-block">
+                            <a class="subcategory-link subcategory-link" href="#" aria-label="Подкатегория 4">Подкатегория 4</a>
+                            <ul class="catalog-categories collapse__content subcategory">
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory41" type="radio" name="subcategory" value="Подкатегория 41">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory41">Подкатегория 41</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory42" type="radio" name="subcategory" value="Подкатегория 42">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory42">Подкатегория 42</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory43" type="radio" name="subcategory" value="Подкатегория 43">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory43">Подкатегория 43</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory44" type="radio" name="subcategory" value="Подкатегория 44">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory44">Подкатегория 44</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory45" type="radio" name="subcategory" value="Подкатегория 45">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory45">Подкатегория 45</label>
+                                </li>
+                                <li class="catalog-categories__item">
+                                    <input class="visually-hidden" id="subcategory46" type="radio" name="subcategory" value="Подкатегория 46">
+                                    <label class="catalog-categories__item__label catalog-categories__item__label--small" for="subcategory46">Подкатегория 46</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="filter-item__btn-group btn-group">
+                        <button class="btn-filter btn-filter--small btn-filter--accent submit" data-dismiss="modal" aria-label="Принять" tabindex="-1">принять</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Бренд -->
+            <fieldset class="catalog-filter__item filter-item collapse-block" id="brand-filter">
+                <a class="collapse__link filter-item__link" href="#" aria-label="Бренд">Бренд
+                    <svg class="collapse__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                        <rect y="3" width="8" height="2"/>
+                        <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                    </svg>
+                </a>
+                <div class="collapse__content filter-item__content">
+                    <ul class="catalog-categories">
+                        <li class="catalog-categories__item">
+                            <input class="" id="brand1" type="checkbox" name="brand" value="Бренд 1">
+                            <label class="catalog-categories__item__label checkbox-label" for="brand1">Бренд 1</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="" id="brand2" type="checkbox" name="brand" value="Бренд 2">
+                            <label class="catalog-categories__item__label checkbox-label" for="brand2">Бренд 2</label>
+                        </li>
+                    </ul>
+                    <div class="filter-item__btn-group btn-group">
+                        <button class="btn-filter btn-filter--default clear" aria-label="сбросить" tabindex="-1">сбросить</button>
+                        <button class="btn-filter btn-filter--accent submit" data-dismiss="modal" aria-label="Принять" tabindex="-1">принять</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Для кого -->
+            <fieldset class="catalog-filter__item filter-item collapse-block" id="for-whom-filter">
+                <a class="collapse__link filter-item__link" href="#" aria-label="для кого">для кого
+                    <svg class="collapse__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                        <rect y="3" width="8" height="2"/>
+                        <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                    </svg>
+                </a>
+                <div class="collapse__content filter-item__content">
+                    <ul class="catalog-categories">
+                        <li class="catalog-categories__item">
+                            <input class="" id="male" type="checkbox" name="for-whom" value="Мужчины">
+                            <label class="catalog-categories__item__label checkbox-label" for="male">Мужчины</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="" id="female" type="checkbox" name="for-whom" value="Женщины">
+                            <label class="catalog-categories__item__label checkbox-label" for="female">Женщины</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="" id="kids" type="checkbox" name="for-whom" value="Дети">
+                            <label class="catalog-categories__item__label checkbox-label" for="kids">Дети</label>
+                        </li>
+                    </ul>
+                    <div class="filter-item__btn-group btn-group">
+                        <button class="btn-filter btn-filter--default clear" aria-label="сбросить" tabindex="-1">сбросить</button>
+                        <button class="btn-filter btn-filter--accent submit" data-dismiss="modal" aria-label="Принять" tabindex="-1">принять</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Цена -->
+            <fieldset class="catalog-filter__item filter-item collapse-block" id="price-filter">
+                <a class="collapse__link filter-item__link" href="#" aria-label="цена">цена
+                    <svg class="collapse__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                        <rect y="3" width="8" height="2"/>
+                        <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                    </svg>
+                </a>
+                <div class="collapse__content filter-item__content">
+                    <div class="range-slider-wrapper">
+                        <div class="price-filter" id="range-slider" data-price-min="0" data-price-max="5000"></div>
+                        <div class="range-values">
+                            <span>От</span>
+                            <input class="range-values__control control-min" type="text" name="price-min-control" value="0">
+                            <span>до</span>
+                            <input class="range-values__control control-max" type="text" name="price-max-control" value="5000">
+                        </div>
+                    </div>
+                    <div class="filter-item__btn-group btn-group">
+                        <button class="btn-filter btn-filter--default clear" aria-label="сбросить" tabindex="-1">сбросить</button>
+                        <button class="btn-filter btn-filter--accent submit" data-dismiss="modal" aria-label="Принять" tabindex="-1">принять</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Размеры -->
+            <fieldset class="catalog-filter__item filter-item collapse-block" id="sizes-filter">
+                <a class="collapse__link filter-item__link" href="#" aria-label="размеры">размеры
+                    <svg class="collapse__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                        <rect y="3" width="8" height="2"/>
+                        <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                    </svg>
+                </a>
+                <div class="collapse__content filter-item__content">
+                    <div id="sizes-scrollbar">
+                        <ul class="catalog-categories catalog-categories--sizes">
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-32/34" type="checkbox" name="size" value="32/34">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-32/34">32/34</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-33/34" type="checkbox" name="size" value="33/34" disabled>
+                                <label class="catalog-categories__item__label checkbox-label" for="size-33/34">33/34</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-34/36" type="checkbox" name="size" value="34/36">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-34/36">34/36</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-35/36" type="checkbox" name="size" value="35/36">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-35/36">35/36</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-36/38" type="checkbox" name="size" value="36/38">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-36/38">36/38</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-37/38" type="checkbox" name="size" value="37/38">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-37/38">37/38</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-38/40" type="checkbox" name="size" value="38/40">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-38/40">38/40</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-40/42" type="checkbox" name="size" value="40/42">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-40/42">40/42</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-41-42" type="checkbox" name="size" value="41-42">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-41-42">41-42</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-42/42" type="checkbox" name="size" value="42/42">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-42/42">42/42</label>
+                            </li>
+                            <li class="catalog-categories__item">
+                                <input class="" id="size-42/44" type="checkbox" name="size" value="42/44">
+                                <label class="catalog-categories__item__label checkbox-label" for="size-42/44">42/44</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter-item__btn-group btn-group">
+                        <button class="btn-filter btn-filter--default clear" aria-label="сбросить" tabindex="-1">сбросить</button>
+                        <button class="btn-filter btn-filter--accent submit" data-dismiss="modal" aria-label="Принять" tabindex="-1">принять</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Наличие -->
+            <fieldset class="catalog-filter__item filter-item collapse-block" id="availability-filter">
+                <a class="collapse__link filter-item__link" href="#" aria-label="наличие">наличие
+                    <svg class="collapse__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                        <rect y="3" width="8" height="2"/>
+                        <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                    </svg>
+                </a>
+                <div class="collapse__content filter-item__content">
+                    <ul class="catalog-categories">
+                        <li class="catalog-categories__item">
+                            <input class="" id="all" type="checkbox" name="available" value="Все">
+                            <label class="catalog-categories__item__label checkbox-label" for="all">Все</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="" id="available" type="checkbox" name="available" value="В наличии">
+                            <label class="catalog-categories__item__label checkbox-label" for="available">В наличии</label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="" id="under-the-order" type="checkbox" name="available" value="Под заказ">
+                            <label class="catalog-categories__item__label checkbox-label" for="under-the-order">Под заказ</label>
+                        </li>
+                    </ul>
+                    <div class="filter-item__btn-group btn-group">
+                        <button class="btn-filter btn-filter--default clear" aria-label="сбросить" tabindex="-1">сбросить</button>
+                        <button class="btn-filter btn-filter--accent submit" data-dismiss="modal" aria-label="Принять" tabindex="-1">принять</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Цвета -->
+            <fieldset class="catalog-filter__item filter-item collapse-block" id="colors-filter">
+                <a class="collapse__link filter-item__link" href="#" aria-label="цвет">цвет
+                    <svg class="collapse__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                        <rect y="3" width="8" height="2"/>
+                        <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                    </svg>
+                </a>
+                <div class="collapse__content filter-item__content">
+                    <ul class="catalog-categories catalog-categories--colors">
+                        <li class="catalog-categories__item">
+                            <input class="" id="red" type="checkbox" name="color" value="Красный">
+                            <label class="catalog-categories__item__label checkbox-label" for="red">
+                                <img class="label__image" src="img/catalog/colors/red.png" alt="Красный">
+                            </label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="" id="white" type="checkbox" name="color" value="Белый">
+                            <label class="catalog-categories__item__label checkbox-label" for="white">
+                                <img class="label__image" src="img/catalog/colors/red.png" alt="Белый">
+                            </label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="" id="gold" type="checkbox" name="color" value="Золотой">
+                            <label class="catalog-categories__item__label checkbox-label" for="gold">
+                                <img class="label__image" src="img/catalog/colors/red.png" alt="Золотой">
+                            </label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="" id="blue" type="checkbox" name="color" value="Синий">
+                            <label class="catalog-categories__item__label checkbox-label" for="blue">
+                                <img class="label__image" src="img/catalog/colors/red.png" alt="Синий">
+                            </label>
+                        </li>
+                        <li class="catalog-categories__item">
+                            <input class="" id="green" type="checkbox" name="color" value="Зеленый">
+                            <label class="catalog-categories__item__label checkbox-label" for="green">
+                                <img class="label__image" src="img/catalog/colors/red.png" alt="Зеленый">
+                            </label>
+                        </li>
+                    </ul>
+                    <div class="filter-item__btn-group btn-group">
+                        <button class="btn-filter btn-filter--default clear" aria-label="сбросить" tabindex="-1">сбросить</button>
+                        <button class="btn-filter btn-filter--accent submit" data-dismiss="modal" aria-label="Принять" tabindex="-1">принять</button>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="filter-item__btn-group btn-group">
+                <button class="btn-filter btn-filter--default clear-all" aria-label="сбросить" tabindex="-1">сбросить</button>
+            </div>
+        </div>
+    <!-- </form> -->
+</div>
+
+<div class="modal" id="static-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog filter-modal">
+        <button class="modal-close" data-dismiss="modal" aria-label="Закрыть окно"></button>
+        <div class="modal-content modal-content__filter">
+        </div>
+    </div>
+</div>

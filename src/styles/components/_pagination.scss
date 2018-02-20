@@ -1,0 +1,51 @@
+.pages-pagination {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0 -4px;
+    @include grid-breakpoint(md) {
+        margin: 30px 0 0 -4px;
+    }
+    &.catalog-pagination {
+        @include grid-breakpoint(md) {
+            margin-left: 15px;
+        }
+    }
+    .pages-pagination__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        margin: 0 4px;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 900;
+        font-size: 0.875rem;
+        color: #333333;
+        border-radius: 50%;
+        @include grid-breakpoint(md) {
+            transition: color 0.3s;
+            &:hover,
+            &:active,
+            &:focus {
+                color: $accent-color;
+            }
+        }
+        &--current {
+            color: $accent-color;
+            border: 1px solid $accent-color;
+        }
+    }
+    .pages-pagination__dots {
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        span {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            margin: 0 3px;
+            background-color: #333333;
+            border-radius: 50%;
+        }
+    }
+}

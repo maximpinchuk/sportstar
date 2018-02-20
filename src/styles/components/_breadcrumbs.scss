@@ -1,0 +1,34 @@
+.breadcrumbs {
+    padding: 50px 0 0 0;
+    @include grid-breakpoint(md) {
+        padding: 60px 0 0 0;
+    }
+    .breadcrumbs__item {
+        position: relative;
+        margin: 0 4px 0 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 0.625rem;
+        color: #d3d3d3;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        @include grid-breakpoint(md) {
+            transition: color 0.3s;
+            &:hover,
+            &:active,
+            &:focus {
+                color: #252425;
+            }
+        }
+        &:after {
+            content: "/";
+            margin: 0 0 0 8px;
+        }
+        &--current {
+            color: #252425;
+            &:after {
+                content: "";
+            }
+        }
+    }
+}

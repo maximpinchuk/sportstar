@@ -1,0 +1,148 @@
+.account-history {
+    margin: 80px 0 0 0;    
+}
+
+.account-history-item {
+    position: relative;
+    margin: 60px 0;
+    padding: 0 10px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    @include grid-breakpoint(lg) {
+        margin: 40px 0;
+        padding: 20px 70px 15px 30px;
+    }
+
+    // Номер заказа и дата
+    .account-history-item__order-info {
+        display: block;
+        display: flex;
+        margin: 30px 0 30px 0;
+        @include grid-breakpoint(lg) {
+            display: flex;
+            margin: 0 0 30px 0;
+        }
+        .order-info__order-num {
+            display: inline-block;
+            width: 49%;
+            @include grid-breakpoint(lg) {
+                order: 2;
+                width: auto;
+            }
+            .order-num__text {
+                display: block;
+                margin: 0 0 15px 0;
+                font-family: "Gotham", "Arial", sans-serif;
+                font-weight: 700;
+                font-size: 0.75rem;
+                color: #252425;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                @include grid-breakpoint(lg) {
+                    display: inline;
+                    font-size: 0.875rem;
+                }
+            }
+            .order-num__number {
+                font-family: "Gotham", "Arial", sans-serif;
+                font-weight: 700;
+                font-size: 0.875rem;
+                color: $accent-color;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                @include grid-breakpoint(lg) {
+                    margin: 0 0 0 20px;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+        .order-info__date {
+            display: inline-block;
+            width: 50%;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: #252425;
+            letter-spacing: 0.05em;
+            text-align: right;
+            @include grid-breakpoint(lg) {
+                width: auto;
+                margin: 0 80px 0 0;
+                font-size: 0.875rem;
+                color: $accent-color;
+                text-align: left;
+            }
+        }
+    }
+
+    // Товары в заказе
+    .account-history-item__order-item {
+        margin: 10px 0;
+        @include grid-breakpoint(sm) {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+        }
+        .order-item__title {
+            margin: 0 0 5px 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 0.875rem;
+            color: #323232;
+            line-height: (24/14);
+            text-transform: uppercase;
+        }
+        .order-item__price {
+            margin: 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 0.875rem;
+            color: $accent-color;
+            line-height: (24/14);
+            text-transform: uppercase;
+            @include grid-breakpoint(sm) {
+                margin-left: 50px;
+                color: #323232;
+            }
+        }
+    }
+
+    // Общая сумма заказа
+    .order-info__total-price {
+        margin: 40px 0 25px 0;
+        @include grid-breakpoint(lg) {
+            position: absolute;
+            top: 20px;
+            right: 70px;
+            margin: 0;
+        }
+        .total-price__text {
+            display: block;
+            margin: 0 0 10px 0;
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            color: #323232;
+            line-height: (18/12);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            @include grid-breakpoint(lg) {
+                display: inline;
+                margin: 0 25px 0 0;
+                font-size: 0.875rem;
+                color: #252425;
+            }
+        }
+        .total-price__number {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: $accent-color;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            @include grid-breakpoint(lg) {
+
+            }
+        }
+    }
+}

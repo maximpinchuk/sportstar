@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Отзывы и вопросы | Sportstar</title>
+        <meta name="description" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="styles/main.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    </head>
+    <body>
+        //= partials/navigation/adaptive-nav.html
+        //= partials/header.html
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <aside class="sidebar consumer-info">
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-nav__item">
+                                <a class="sidebar-nav__item__link" href="account.html" aria-label="мои данные">мои данные</a>
+                            </li>
+                            <li class="sidebar-nav__item">
+                                <a class="sidebar-nav__item__link" href="account-history.html" aria-label="история заказов">история заказов</a>
+                            </li>
+                            <li class="sidebar-nav__item">
+                                <a class="sidebar-nav__item__link sidebar-nav__item__link--current" href="#" aria-label="отзывы и вопросы">отзывы и вопросы</a>
+                            </li>
+                            <li class="sidebar-nav__item">
+                                <a class="sidebar-nav__item__link" href="account-favorite.html" aria-label="избранное">избранное</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <article class="article">
+                        <h1 class="article__title">Отзывы и вопросы</h1>
+                        <ul class="tabs-nav product-page">
+                            <li class="tabs-nav__item active">
+                                <a class="tabs-nav__item__link" href="#reviews" aria-label="Отзывы" data-tab="01">Отзывы</a>
+                            </li>
+                            <li class="tabs-nav__item">
+                                <a class="tabs-nav__item__link" href="#faq" aria-label="Вопросы" data-tab="02">Вопросы</a>
+                            </li>
+                        </ul>
+                        <div class="tabs-container reviews-faq">
+                            <div class="tab active" id="reviews">
+                                <div class="reviews-total">
+                                    <span class="reviews-total__rating"></span>
+                                    <span class="reviews-total__text">средняя оценка товара</span>
+                                </div>
+                                <div class="row">
+                                    <div class="col_6">
+                                        <div class="review-item">
+                                            <span class="review-item__name">елена меньшина</span>
+                                            <span class="review-item__date">22.11.2017</span>
+                                            <p class="review-item__text">Такие себе трусы...</p>
+                                            <div class="review-item__stars" data-rating="1">
+                                                <div class="stars stars-back-svg"></div>
+                                                <div class="stars stars-front-svg"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col_6">
+                                        <div class="review-item">
+                                            <span class="review-item__name">елена меньшина</span>
+                                            <span class="review-item__date">22.11.2017</span>
+                                            <p class="review-item__text">Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца?</p>
+                                            <div class="review-item__stars" data-rating="5">
+                                                <div class="stars stars-back-svg"></div>
+                                                <div class="stars stars-front-svg"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col_6">
+                                        <div class="review-item">
+                                            <span class="review-item__name">елена меньшина</span>
+                                            <span class="review-item__date">22.11.2017</span>
+                                            <p class="review-item__text">Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца?</p>
+                                            <div class="review-item__stars" data-rating="3">
+                                                <div class="stars stars-back-svg"></div>
+                                                <div class="stars stars-front-svg"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-center">
+                                    <button class="btn btn--accent review-btn" data-remodal-target="review-modal" aria-label="Оставить отзыв">Оставить отзыв</button>
+                                </div>
+                            </div>
+                            <div class="tab" id="faq">
+                                <div class="row">
+                                    <div class="col_6">
+                                        <div class="faq-item">
+                                            <span class="faq-item__name">елена меньшина</span>
+                                            <span class="faq-item__date">22.11.2017</span>
+                                            <p class="faq-item__text">Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца?</p>
+                                            <a class="faq-item__link" href="#" aria-label="смотреть ответ">смотреть ответ
+                                                <svg class="faq-item__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                                                    <rect y="3" width="8" height="2"/>
+                                                    <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                                                </svg>
+                                            </a>
+                                            <div class="faq-item__collapse-block">
+                                                <p class="faq-item__collapse-block__content">Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца? Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col_6">
+                                        <div class="faq-item">
+                                            <span class="faq-item__name">елена меньшина</span>
+                                            <span class="faq-item__date">22.11.2017</span>
+                                            <p class="faq-item__text">Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца?</p>
+                                            <a class="faq-item__link" href="#" aria-label="смотреть ответ">смотреть ответ
+                                                <svg class="faq-item__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                                                    <rect y="3" width="8" height="2"/>
+                                                    <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                                                </svg>
+                                            </a>
+                                            <div class="faq-item__collapse-block">
+                                                <p class="faq-item__collapse-block__content">Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца? Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col_6">
+                                        <div class="faq-item">
+                                            <span class="faq-item__name">елена меньшина</span>
+                                            <span class="faq-item__date">22.11.2017</span>
+                                            <p class="faq-item__text">Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца?</p>
+                                            <a class="faq-item__link" href="#" aria-label="смотреть ответ">смотреть ответ
+                                                <svg class="faq-item__link__icon" viewBox="0 0 8 8" width="8px" height="8px">
+                                                    <rect y="3" width="8" height="2"/>
+                                                    <rect class="plus-vertical" y="3" transform="matrix(4.501980e-011 1 -1 4.501980e-011 8 -1.809886e-010)" width="8" height="2"/>
+                                                </svg>
+                                            </a>
+                                            <div class="faq-item__collapse-block">
+                                                <p class="faq-item__collapse-block__content">Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца? Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-center">
+                                    <button class="btn btn--accent faq-btn" data-remodal-target="faq-modal" aria-label="Задать вопрос">Задать вопрос</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+
+
+        <div class="remodal middle" id="faq-modal" data-remodal-id="faq-modal">
+            <button class="remodal-close" data-remodal-action="close" aria-label="Закрыть окно">
+                <span></span>
+                <span></span>
+            </button>
+            <h5 class="remodal__title">Задать вопрос</h5>
+            <form class="form remodal-form" action="example.php">
+                <fieldset class="form-group form-group--single">
+                    <div class="form-control-wrapper--single">
+                        <input class="form-control" id="review-name" type="text" name="name">
+                        <label class="form-label" for="review-name">Ваше имя</label>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group form-group--single">
+                    <div class="form-control-wrapper--single">
+                        <input class="form-control" id="review-email" type="email" name="email">
+                        <label class="form-label" for="review-email">Ваша почта</label>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group form-group--single">
+                    <div class="form-control-wrapper--single">
+                        <textarea class="form-control textarea" id="review-msg" name="review-msg"></textarea>
+                        <label class="form-label" for="review-msg">Ваш вопрос</label>
+                    </div>
+                </fieldset>
+                <button class="btn btn--accent">Задать вопрос</button>
+            </form>
+        </div>
+
+        <div class="remodal middle" id="review-modal" data-remodal-id="review-modal">
+            <button class="remodal-close" data-remodal-action="close" aria-label="Закрыть окно">
+                <span></span>
+                <span></span>
+            </button>
+            <h5 class="remodal__title">Оставить отзыв</h5>
+            <form class="form remodal-form" action="example.php">
+                <fieldset class="form-group form-group--single">
+                    <div class="form-control-wrapper--single">
+                        <input class="form-control" id="review-name" type="text" name="name">
+                        <label class="form-label" for="review-name">Ваше имя</label>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group form-group--single">
+                    <div class="form-control-wrapper--single">
+                        <input class="form-control" id="review-email" type="email" name="email">
+                        <label class="form-label" for="review-email">Ваша почта</label>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group form-group--single">
+                    <div class="form-control-wrapper--single">
+                        <textarea class="form-control textarea" id="review-msg" name="review-msg"></textarea>
+                        <label class="form-label" for="review-msg">Ваш отзыв</label>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group form-group--single">
+                    <input class="review-rating" type="hidden" name="review-rating" value="">
+                    <div class="rating">
+                        <div class="rating-item" data-rate="1"></div>
+                        <div class="rating-item" data-rate="2"></div>
+                        <div class="rating-item" data-rate="3"></div>
+                        <div class="rating-item" data-rate="4"></div>
+                        <div class="rating-item" data-rate="5"></div>
+                    </div>
+                </fieldset>
+                <button class="btn btn--accent">Оставить отзыв</button>
+            </form>
+        </div>
+
+        //= partials/footer.html
+    </body>
+</html>

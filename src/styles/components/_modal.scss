@@ -1,0 +1,209 @@
+// Подложка модального окна
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+    &.in {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+// Иконка крестика в обводке
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+// Иконка крестика
+.modal-close {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    margin-left: -10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 20px;
+        height: 1px;
+        background-color: #3b3b3b;
+        transform-origin: center;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+
+
+// Закрытие у модального окна с корзиной
+.modal-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 35px;
+    height: 100%;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    @include grid-breakpoint(md) {
+        width: 55px;
+        transform-origin: left;
+        transition: width 0.2s 0.1s;
+        &:hover {
+            width: 155px;
+            transition: width 0.3s 0.08s;
+            .modal-back__text {
+                opacity: 1;
+                transition: opacity 0.2s 0.2s;
+            }
+            & + .modal-content {
+                &.cart-modal {
+                    .cart-modal-wrapper {
+                        transform: translateX(85px);
+                        transition: transform 0.3s;
+                    }
+                }
+                &.subscribe-modal {
+                    .subscribe-modal-wrapper {
+                        transform: translateX(65px);
+                        transition: transform 0.3s;
+                    }
+                }
+            }
+        }
+    }
+    .modal-back__icon {
+        position: absolute;
+        top: 25px;
+        left: 10px;
+        width: 15px;
+        height: 8px;
+        fill: #252425;
+        z-index: 1;
+        @include grid-breakpoint(md) {
+            left: 20px;
+        }
+    }
+    .modal-back__text {
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        z-index: 1;
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: #252425;
+        line-height: (18/12);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: left;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+}
+
+
+
+// Тело модального окна
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    opacity: 0;
+    transition: opacity 0.1s;
+    will-change: transform;
+    &.in {
+        opacity: 1;
+        .modal-dialog {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-50%) translateZ(0);
+            // transform: translate3d(-50%, -50%, 0);
+            transition: opacity 0.2s 0.1s,
+                        transform 0.3s 0.1s;
+        }
+    }
+
+    .modal-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 102;
+        opacity: 0;
+        transform: translateX(-50%) translateY(-30%) translateZ(0);
+        // transform: translate3d(-50%, -30%, 0);
+        transition: opacity 0.2s,
+                    transform 0.2s;
+        &.filter-modal {
+            width: 100%;
+            max-width: 380px;
+        }
+
+        &--small {
+            width: 100%;
+            @include grid-breakpoint(md) {
+                width: 555px;
+            }
+        }
+
+        &--large {
+            width: 100%;
+            @include grid-breakpoint(sm) {
+                width: 750px;
+            }
+        }
+
+        &--extralarge {
+            width: 100%;
+            @include grid-breakpoint(md) {
+                width: 945px;
+            }
+        }
+
+        .modal-content {
+            padding: 35px 30px 35px 30px;
+            margin: 0 15px;
+            background-color: #ffffff;
+            border-radius: 5px;
+
+            &.quickview-modal {
+                padding: 20px 0 0 0;
+            }
+
+            &.cart-modal {
+                padding: 50px 70px 60px 85px;
+                background-color: $accent-color;
+                border-radius: 0;
+                transform-origin: left;
+                transition: transform 0.2s 0.1s;
+            }
+        }
+    }
+}

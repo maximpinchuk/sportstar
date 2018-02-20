@@ -1,0 +1,38 @@
+.price-filter {
+    margin-top: 20px;
+}
+
+.range-slider-wrapper {
+    position: relative;
+    min-height: 70px;
+}
+
+// Range slider values
+.range-values {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    span {
+        margin-right: 10px;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: #3b3b3b;
+    }
+    .range-values__control {
+        width: 53px;
+        height: 18px;
+        margin-right: 30px;
+        padding-right: 5px;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: #3b3b3b;
+        text-align: right;
+        background-color: #fbfbfb;
+        border: 1px solid #f6f6f6;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

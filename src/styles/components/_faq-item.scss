@@ -1,0 +1,118 @@
+.reviews-total {
+    margin: 0 0 90px 0;
+    .reviews-total__rating {
+        margin: 0 20px 0 0;
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: $accent-color;
+    }
+    .reviews-total__text {
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+        color: #515151;
+        line-height: (24/18);
+        text-transform: uppercase;
+    }
+}
+
+.faq-item,
+.review-item {
+    position: relative;
+    margin: 0 0 70px 0;
+    @include grid-breakpoint(md) {
+        margin: 0 0 60px 0;
+    }
+    .faq-item__name,
+    .review-item__name {
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: $accent-color;
+        line-height: (24/12);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .faq-item__date,
+    .review-item__date {
+        margin-left: 60px;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: #a3abc4;
+        line-height: (24/12);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .faq-item__text,
+    .review-item__text {
+        margin: 20px 0 45px 0;
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #363636;
+        line-height: (24/16);
+        @include grid-breakpoint(md) {
+            margin: 20px 50px 35px 0;
+        }
+    }
+
+    .review-item__stars {
+        position: relative;
+        width: 110px;
+        height: 20px;
+        margin: -25px 0 0 0;
+    }
+
+    .faq-item__link {
+        position: relative;
+        padding: 0 25px 0 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 0.875rem;
+        color: #343434;
+        text-transform: uppercase;
+        &.opened {
+            .faq-item__link__icon {
+                .plus-vertical {
+                    display: none;
+                }
+            }
+        }
+        .faq-item__link__icon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            margin-top: -5px;
+            fill: #343434;
+        }
+    }
+
+    .faq-item__collapse-block {
+        // overflow: hidden;
+        // transition: height 0.3s;
+        display: none;
+        &.hidden {
+            // height: 0 !important;
+        }
+        .faq-item__collapse-block__content {
+            margin: 20px 0 0 0;
+            font-family: "Open Sans", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #363636;
+            line-height: (24/16);
+            @include grid-breakpoint(md) {
+                margin: 20px 50px 0 0;
+            }
+        }
+    }
+}
+
+.faq-btn,
+.review-btn {
+    // margin: 95px 0 0 0;
+}

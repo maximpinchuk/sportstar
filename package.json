@@ -1,0 +1,32 @@
+{
+  "name": "sportstar",
+  "version": "1.0.0",
+  "description": "Sportstar website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://max_pinchuk@bitbucket.org/max_pinchuk/sportstar.git"
+  },
+  "author": "Spaced DA",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/max_pinchuk/sportstar#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "simplebar": "^2.5.1"
+  }
+}

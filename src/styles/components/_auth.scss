@@ -1,0 +1,192 @@
+.auth-modal {
+    padding: 50px 30px;
+    @include grid-breakpoint(sm) {
+        padding: 0;
+    }
+
+    .auth-modal-wrapper {
+        @include grid-breakpoint(sm) {
+            width: 555px;
+            margin: 35px auto 50px auto;
+            padding: 0 15px;
+        }
+        &.small {
+            @include grid-breakpoint(sm) {
+                width: 100%;
+            }
+        }
+    }
+
+    .auth-modal__title {
+        margin: 5px 0 0 0;
+        font-family: "Gotham", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $accent-color;
+        line-height: 1.33;
+        text-transform: uppercase;
+        text-align: center;
+        @include grid-breakpoint(sm) {
+            line-height: (56/24);
+        }
+    }
+
+    .auth-modal-form {
+        margin: 40px -15px 40px -15px;
+        @include grid-breakpoint(sm) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form-group {
+            margin: 0 0 30px 0;
+            @include grid-breakpoint(sm) {
+                width: calc(50% - 30px);
+                margin: 0 15px 40px 15px;
+            }
+            &.small {
+                @include grid-breakpoint(sm) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .auth-modal-form__btn-row {
+            width: 100%;
+            margin: 20px 0 0 0;
+            &.small {
+                @include grid-breakpoint(sm) {
+                    margin: 0 15px;
+                    .btn-row__btn {
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+            }
+            .btn-row__btn {
+                margin: 30px 20px 0 20px;
+                width: 60%;
+                @include grid-breakpoint(sm) {
+                    float: left;
+                    width: calc(50% - 30px);
+                    margin: 0 15px;
+                }
+                &.btn--outline {
+                    height: 45px;
+                    font-family: "Gotham", "Arial", sans-serif;
+                    font-weight: 700;
+                    font-size: 0.875rem;
+                    color: #252425;
+                    background-color: transparent;
+                    border: 1px solid #252425;
+                    border-radius: 3px;
+                    outline: none;
+                    @include grid-breakpoint(sm) {
+                        transition: background-color 0.3s,
+                                    color 0.3s,
+                                    border 0.3s;
+                        &:hover,
+                        &:focus {
+                            background-color: #2ca3d4;
+                            color: #ffffff;
+                            border: 1px solid #2ca3d4;
+                        }
+                    }
+                }
+
+                &.btn--accent {
+                    height: 45px;
+                    font-family: "Gotham", "Arial", sans-serif;
+                    font-weight: 700;
+                    font-size: 0.875rem;
+                    color: #ffffff;
+                    background-color: $accent-color;
+                    border: 1px solid $accent-color;
+                    border-radius: 5px;
+                    outline: none;
+                    @include grid-breakpoint(sm) {
+                        transition: background-color 0.3s,
+                                    color 0.3s;
+                        &:hover,
+                        &:focus {
+                            background-color: #2ca3d4;
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .auth-modal-socials {
+        @include grid-breakpoint(sm) {
+            display: flex;
+            justify-content: center;
+        }
+
+        .auth-modal-socials__text {
+            font-family: "Gotham", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 0.625rem;
+            color: $accent-color;
+            line-height: (28/10);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .auth-modal-socials__social-auth {
+            display: flex;
+            justify-content: center;
+            @include grid-breakpoint(sm) {
+                justify-content: flex-start;
+                margin: 0 0 0 20px;
+            }
+
+            .social-auth__item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 33px;
+                height: 33px;
+                margin: 15px 15px 0 15px;
+                background-color: #ffffff;
+                border: 1px solid $accent-color;
+                border-radius: 50%;
+                @include grid-breakpoint(sm) {
+                    margin: 0 0 0 30px;
+                }
+                @include grid-breakpoint(md) {
+                    transition: background-color 0.3s;
+                    &:hover,
+                    &:focus {
+                        background-color: $accent-color;
+                        .social-auth__item__icon {
+                            fill: #ffffff;
+                        }
+                    }
+                }
+
+                .social-auth__item__icon {
+                    fill: #3c3c3c;
+                    @include grid-breakpoint(md) {
+                        transition: fill 0.3s;
+                    }
+
+                    &.vkontakte {
+                        width: 17px;
+                        height: 10px;
+                    }
+
+                    &.facebook {
+                        width: 7px;
+                        height: 16px;
+                    }
+
+                    &.odnoklassniki {
+                        width: 10px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

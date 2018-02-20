@@ -1,0 +1,48 @@
+.noUi-base {
+    height: 1px;
+    background-color: #d3d3d3;
+}
+
+.noUi-horizontal {
+    width: 90%;
+    height: 1px;
+    margin-left: 5%;
+    .noUi-handle {
+        top: -7px;
+        left: -7px;
+        width: 14px;
+        height: 14px;
+        border: none;
+        border-radius: 50%;
+        background-color: #3fb8ea;
+        box-shadow: none;
+        outline: none;
+        cursor: pointer;
+        &:before,
+        &:after {
+            display: none;
+        }
+        @media screen and (min-width: 992px) {
+            transform-origin: center;
+            transition: transform 0.25s ease-in;
+            &:hover {
+                transform: scale3d(1.2, 1.2, 1.2);
+            }
+        }
+    }
+}
+
+.noUi-target {
+    background: #d3d3d3;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.noUi-connect {
+    top: -1px;
+    height: 3px;
+    background-color: #3fb8ea;
+    border-radius: 0;
+    box-shadow: none;
+}
